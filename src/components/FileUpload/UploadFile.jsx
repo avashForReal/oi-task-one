@@ -60,13 +60,13 @@ const UploadFile = () => {
   return (
     <div className="mt-6 w-11/12 mx-auto">
       <div className=" bg-gray-300 border-dashed border-4 border-blue-500 h-36" {...getRootProps()}>
-        <input {...getInputProps()} />
-        <p className="text-center font-normal italic mt-10">Drop your files here or click to select your file.</p>
+        <input data-testid="fileinput" {...getInputProps()} />
+        <p data-testid="droptext" className="text-center font-normal italic mt-10">Drop your files here or click to select your file.</p>
         <GoDesktopDownload className="w-12 h-12 mx-auto"/>
       </div>
 
       <div className="mt-4 flex items-center justify-center">
-        <button className="border-2 border-blue-700 rounded-md py-2 px-4" onClick={handleSubmit} disabled={fileRejections.length > 0 || acceptedFiles.length<=0}>
+        <button data-testid="upload-btn" className="border-2 border-blue-700 rounded-md py-2 px-4" onClick={handleSubmit} disabled={fileRejections.length > 0 || acceptedFiles.length<=0}>
           Upload File
         </button>
       </div>

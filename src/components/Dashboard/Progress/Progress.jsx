@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const Progress = () => {
     
-    const [completed, setCompleted] = useState(0);
+    const [completed, setCompleted] = useState(50);
 
     useEffect(() => {
         setInterval(() => setCompleted(Math.floor(Math.random() * 100) + 1), 3000);
@@ -20,7 +20,7 @@ const Progress = () => {
         </div>
 
       <div className="bg-gray-300 mx-6 mt-2 h-6 rounded-full">
-        <div style={barStyle} className="h-full bg-blue-700 rounded-full text-center">
+        <div data-testid="progress-bar" style={barStyle} className="h-full bg-blue-700 rounded-full text-center">
             <span className="text-gray-100 font-bold">{`${completed}%`}</span>
         </div>
       </div>

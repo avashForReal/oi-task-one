@@ -34,6 +34,7 @@ const Form = () => {
               Name of institute:
             </label>
             <input
+              data-testid="institute"
               className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
               onChange={(e) => handleChange(e)}
               value={formData.institute}
@@ -50,6 +51,7 @@ const Form = () => {
               Number of days:
             </label>
             <input
+             data-testid="days"
               className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
               onChange={(e) => handleChange(e)}
               value={formData.days}
@@ -66,6 +68,7 @@ const Form = () => {
               Name of CSV file:
             </label>
             <input
+            data-testid="csvfile"
               className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
               onChange={(e) => handleChange(e)}
               value={formData.csvfile}

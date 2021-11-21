@@ -15,22 +15,22 @@ for (let i = 0; i < 10; i++) {
 const ViewTable = () => {
   return (
     <>
-      <div class="container flex justify-center mx-auto">
-        <div class="flex flex-col">
+      <div className="container flex justify-center mx-auto">
+        <div className="flex flex-col">
           <div className="border-b border-gray-200 shadow">
             <table className="text-left">
               <thead className="bg-gray-300">
                 <tr>
-                  <th className="px-6 py-2 text-xs text-gray-500">Name</th>
-                  <th className="px-6 py-2 text-xs text-gray-500">Email</th>
-                  <th className="px-6 py-2 text-xs text-gray-500">Phone</th>
-                  <th className="px-6 py-2 text-xs text-gray-500">Job title</th>
-                  <th className="px-6 py-2 text-xs text-gray-500">Company</th>
+                  <th data-testid="name" className="px-6 py-2 text-xs text-gray-500">Name</th>
+                  <th data-testid="email" className="px-6 py-2 text-xs text-gray-500">Email</th>
+                  <th data-testid="phone" className="px-6 py-2 text-xs text-gray-500">Phone</th>
+                  <th data-testid="job" className="px-6 py-2 text-xs text-gray-500">Job title</th>
+                  <th data-testid="company" className="px-6 py-2 text-xs text-gray-500">Company</th>
                 </tr>
               </thead>
               <tbody className="bg-white">
-                {users.map((user) => (
-                  <tr className="whitespace-nowrap border-b">
+                {users.map((user, index) => (
+                  <tr key={index} className="whitespace-nowrap border-b">
                     <td className="px-6 py-4 text-sm text-gray-800 font-semibold">
                       {user.name}
                     </td>

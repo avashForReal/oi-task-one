@@ -15,12 +15,14 @@ function App() {
 
       <div className="app">
         <Routes>
-          <Route path="/" element={<UploadFile />} />
+          <Route exact path="/" element={<UploadFile />} />
           <Route path="/table" element={<ViewTable />} />
           <Route path="/form" element={<Form />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </div>
+
+      
     </>
   );
 }

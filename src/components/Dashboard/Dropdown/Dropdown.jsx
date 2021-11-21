@@ -9,8 +9,8 @@ const Dropdown = () => {
 
     <div className="w-3/12">
       <select name="csvFiles" id="csvFiles" className="w-full h-8 rounded-md text-center font-medium border-2 hover:border-blue-700  outline-none">
-        {csvNames.map((csvName) => {
-          return <option className="border-none" value={csvName}>{csvName}</option>;
+        {csvNames.map((csvName, index) => {
+          return <option key={index} className="border-none" value={csvName}>{csvName}</option>;
         })}
       </select>
       </div>
